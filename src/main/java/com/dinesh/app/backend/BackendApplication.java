@@ -18,7 +18,8 @@ public class BackendApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:3000")
+				registry.addMapping("/**")
+						.allowedOrigins("http://localhost:3000", "https://full-stack-app-frontend-eight.vercel.app/")
 						.allowedMethods("GET", "POST", "DELETE", "PUT")
 						.allowedHeaders("*");
 			}
